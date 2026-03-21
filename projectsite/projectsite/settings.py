@@ -12,12 +12,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
-import socket
+# import socket
 
-if "pythonanywhere" in socket.gethostname():
-    SITE_ID = 2 # production site (psusphere.pythonanywhere.com)
-else:
-    SITE_ID = 1 # local site (127.0.0.1:8000)
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -56,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.github',
 ]
+SITE_ID = 1
 
 AUTHENTICATION_BACKENDS = [
 'django.contrib.auth.backends.ModelBackend',
