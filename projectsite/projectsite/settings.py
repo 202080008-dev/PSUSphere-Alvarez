@@ -54,9 +54,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.github',
 ]
 if "pythonanywhere" in socket.gethostname():
-    SITE_ID = 1 # production site (psusphere.pythonanywhere.com)
+    SITE_ID = 2 # production site (psusphere.pythonanywhere.com)
 else:
-    SITE_ID = 2 # local site (127.0.0.1:8000)
+    SITE_ID = 1 # local site (127.0.0.1:8000)
 
 AUTHENTICATION_BACKENDS = [
 'django.contrib.auth.backends.ModelBackend',
